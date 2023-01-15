@@ -5,7 +5,6 @@ from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
 import time
 
-
 # specify the query you want to search for
 query = "House with no mirrors"
 
@@ -47,14 +46,6 @@ for result in results:
     print(f"Description: {description}")
     print(f"Href: {href}\n")
 
-# find the search results
-# results = soup.find('div', attrs={'class': 'r'})
-# results = soup.find_all("div", attrs={'data-sokoban-container': True})
-# print(results)
-# print the top 5 results
-# for i in range(5):
-    # print(results[i].text)
-# print(results[i].find("a").text)
 end = time.time()
 print("Time taken to scrape the results: ", end-start, " ms")
 # close the web driver
